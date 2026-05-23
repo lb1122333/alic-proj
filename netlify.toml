@@ -1,0 +1,17 @@
+[build]
+  publish = "public"
+  command = ""
+
+[[edge_functions]]
+  path = "/*"
+  function = "relay"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options          = "DENY"
+    X-Content-Type-Options   = "nosniff"
+    Referrer-Policy          = "no-referrer"
+    Permissions-Policy       = "geolocation=(), camera=(), microphone=()"
+    # Only allow connections — no embedding, no resource loading from outside.
+    Content-Security-Policy  = "default-src 'none'; connect-src *; frame-ancestors 'none';"

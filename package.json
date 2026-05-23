@@ -1,0 +1,14 @@
+{
+  "name": "NetLeafy",
+  "version": "1.0.0",
+  "description": "My personal frontend application",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required'"
+  },
+  "devDependencies": {
+    "netlify-cli": "22.1.3"
+  }
+}
